@@ -12,9 +12,8 @@ class Console(metaclass=ConsoleMeta):
     def __init__():
         pass
 
-    def message(self, *args, **kwargs): 
-        color, background, effect, message, end = kwargs
-        print()
+    def message(self, message *args, **kwargs): 
+        print(message)
 
 
     def dialog(self, *args, **kwargs):
