@@ -1,4 +1,4 @@
-class Colors (): 
+class Colors ():
     FOREGROUND_DEFAULT  =   "\033[32m"
     BACKGROUND_DEFAULT  =   "\033[40m"
 

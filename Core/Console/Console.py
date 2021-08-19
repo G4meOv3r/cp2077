@@ -12,7 +12,7 @@ class Console(metaclass=ConsoleMeta):
     def __init__():
         pass
 
-    def message(self, message *args, **kwargs): 
+    def message(self, message, *args, **kwargs): 
         print(message)
 
 
