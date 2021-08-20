@@ -12,7 +12,7 @@ class ConsoleMeta(type):
 
 class Console(metaclass=ConsoleMeta):
     def __init__(self):
-        if platform = 'win32':
+        if platform == 'win32':
             import colorama
             colorama.init()
 
