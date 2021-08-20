@@ -1,3 +1,5 @@
+import colorama
+
 class ConsoleMeta(type):
     _instances = {}
 
@@ -10,7 +12,7 @@ class ConsoleMeta(type):
 
 class Console(metaclass=ConsoleMeta):
     def __init__():
-        pass
+        colorama.init()
 
     def message(self, message, *args, **kwargs): 
         print(message)

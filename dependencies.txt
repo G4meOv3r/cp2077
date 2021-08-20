@@ -1,1 +1,2 @@
 pip install keyboard
+pip install colorama
