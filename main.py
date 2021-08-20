@@ -4,7 +4,7 @@ from Core.Console.Effects import Effects
 from Core.Console.Text import Text
 
 def main(): 
-    print(Text("<red>red</red> <i>italic</i> <b>bold</b>"))
+    Console().message(Text("<red>red</red> <i>italic</i> <b>bold</b>"))
 
 if __name__ == "__main__":
     main()

@@ -11,7 +11,7 @@ class ConsoleMeta(type):
 
 
 class Console(metaclass=ConsoleMeta):
-    def __init__():
+    def __init__(self):
         colorama.init()
 
     def message(self, message, *args, **kwargs): 
