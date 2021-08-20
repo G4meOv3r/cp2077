@@ -1,4 +1,4 @@
-import colorama
+from sys import platform
 
 class ConsoleMeta(type):
     _instances = {}
@@ -12,7 +12,9 @@ class ConsoleMeta(type):
 
 class Console(metaclass=ConsoleMeta):
     def __init__(self):
-        colorama.init()
+        if platform = 'win32':
+            import colorama
+            colorama.init()
 
     def message(self, message, *args, **kwargs): 
         print(message)
