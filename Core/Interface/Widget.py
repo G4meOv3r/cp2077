@@ -24,7 +24,7 @@ class Widget:
 
         self._color_pair = Colors().get(Colors.WHITE, Colors.BLACK)
 
-        self._widget = curses.newpad(self._height, self._width+1)
+        self._widget = curses.newwin(self._height, self._width + 1, self._y, self._x)
         
         if parent: parent.add_child(self)
 
@@ -45,14 +45,7 @@ class Widget:
         pass
 
     def _refresh(self) -> None:
-        self._widget.refresh(
-            self._y,
-            self._x,
-            self._shift_y,
-            self._shift_x,
-            self._frame_height,
-            self._frame_width 
-        )
+        self._widget.refresh()
 
     def show(self) -> None:
         self._show = True
