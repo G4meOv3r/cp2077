@@ -12,7 +12,7 @@ class Widget:
     ):
         self._x = x
         self._y = y
-        self._width = width-1
+        self._width = width
         self._height = height
         self._frame_width = frame_width if frame_width else self._width
         self._frame_height = frame_height if frame_height else self._height
@@ -23,7 +23,7 @@ class Widget:
         self._show = False
 
         self._color_pair = Colors().get(Colors.WHITE, Colors.BLACK)
-        self._widget = curses.newwin(self._height, self._width + 1, self._y, self._x)
+        self._widget = curses.newwin(self._height, self._width, self._y, self._x)
         
         if parent: parent.add_child(self)
 
@@ -36,7 +36,12 @@ class Widget:
             child.render()
 
     def _flush(self) -> None:
-        self._widget.addstr(self._y, self._x, ' ' * self._height * self._width, self._color_pair)
+        for y in range(self._height):
+            for x in range(self._width):
+                try:
+                    self._widget.addch(y, x, '*', self._color_pair)
+                except:
+                    pass
 
     def _fill(self) -> None:
         pass
