@@ -1,0 +1,5 @@
+class Events():
+    KEY_UP_PRESSED      =   0x000000
+    KEY_RIGHT_PRESSED   =   0x000001
+    KEY_DOWN_PRESSED    =   0x000002
+    KEY_LEFT_PRESSED    =   0x000003
