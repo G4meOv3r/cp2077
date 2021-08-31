@@ -1,21 +1,16 @@
-from Core.Interface.Widget import Widget
+from Core.Interface.Widgets.Main import Main
 from Gameplay.Widgets.Menu import Menu
+from Gameplay.Widgets.Footer import Footer
 
-class MainWindow(Widget):
+class MainWindow(Main):
     def __init__(
         self,
-        x=0, y=0, 
-        width=0, height=0,
-        frame_width=None, frame_height=None, 
-        shift_x=0, shift_y=0,
         parent=None,
     ):
-        height, width = parent.getmaxyx()
-        super().__init__(
-            height=height, width=width,
-        )
+        super().__init__(parent)
 
-        Menu(x=0, y=0, width=30, height=self._height, parent=self)
+        Menu(x=0, y=0, width=25, height=self._height, parent=self)
+        Footer(x=0, y=self._height-1, parent=self)
 
 
     def _fill(self):

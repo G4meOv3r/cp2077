@@ -3,3 +3,5 @@ class Events():
     KEY_RIGHT_PRESSED   =   0x000001
     KEY_DOWN_PRESSED    =   0x000002
     KEY_LEFT_PRESSED    =   0x000003
+    KEY_TAB_PRESSED     =   0x000004
+    KEY_H_PRESSED       =   0x000005

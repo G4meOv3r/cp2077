@@ -1,6 +1,5 @@
 from Core.Snippets.Singletone import SingletonMeta
 
-
 class EventCallback:
     def __init__(self, event, callback, *args, **kwargs):
         self.event = event
@@ -21,7 +20,7 @@ class EventsController(metaclass=SingletonMeta):
             subscribers_numbers = self._subscribers_by_event[e]
             for subscriber_number in subscribers_numbers:
                 self._subscribers[subscriber_number]()
-        except:
+        except Exception as e:
             pass
     
     def subscribe(self, event, callback, *args, **kwargs) -> int:
